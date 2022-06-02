@@ -27,3 +27,8 @@ renato mota tem 26 anos de idade, e seu imc é de  27.16
 idade_hoje = data_atual.year - ano_nascimento
 print(f"{nome} tem {idade_hoje} anos de idade, {altura} de altura, pesa {peso}kg e tem o imc de {imc:.2f} ")
 print(f"{nome} nasceu em {ano_nascimento}")
+
+"""
+renato mota tem 27 anos de idade, 1.8 de altura, pesa 88kg e tem o imc de 27.16 
+renato mota nasceu em 1995
+"""
