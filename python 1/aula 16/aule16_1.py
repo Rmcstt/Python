@@ -1,6 +1,6 @@
 idu = input('digite um numero inteiro: ')
 
-if not idu.isdigit():
+if not idu.isdigit() and idu == int(idu):
     print('this is not a int number')
 else:
     idu = int(idu)

@@ -1,7 +1,7 @@
 id_user = input('digite o numero de usuario: ')
 
 
-if id_user.isdigit():
+if id_user.isnumeric():
     id_user = int(id_user)
 
     if id_user % 2 == 0:
