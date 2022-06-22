@@ -14,5 +14,5 @@ texto = input('qualquer coisa: ')
 for letra in texto:  # bem mais curto em relação ao texto comentado em cima
     print(letra)
 
-for n, letra in enumerate(texto):  # para enumerae os indices de cada letra
+for n, letra in enumerate(texto):  # para enumerar os indices de cada letra
     print(n, letra)
