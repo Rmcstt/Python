@@ -1,4 +1,4 @@
-secreto = 'perfume'
+secreto = 'salgado'
 digitadas = []
 chances = 3
 print('forca, voce tera 3 chances!!!')
@@ -23,7 +23,7 @@ while True:
         print(f'putz, a letra "{letra}" nao confere !!! Tente outra vez')
         digitadas.pop()
 
-    secreto_temporario = ''
+    secreto_temporario = ''  # conceito "iterar"
     for letra_secreta in secreto:
         if letra_secreta in digitadas:
             secreto_temporario += letra_secreta
@@ -31,7 +31,7 @@ while True:
             secreto_temporario += '*'
 
     if secreto_temporario == secreto:
-        print(f' que legal, voce advinhou a palavra, a palavra era {secreto_temporario}')
+        print(f' que legal, voce advinhou a palavra, a palavra era "{secreto_temporario}"')
         break
     else:
         print(f' a palavra secreta esta assim: "{secreto_temporario}"')
