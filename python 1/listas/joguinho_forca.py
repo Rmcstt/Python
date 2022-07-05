@@ -31,7 +31,8 @@ while True:
             secreto_temporario += '*'
 
     if secreto_temporario == secreto:
-        print(f' que legal, voce advinhou a palavra, a palavra era "{secreto_temporario}"')
+        print(
+            f' que legal, voce advinhou a palavra, a palavra era "{secreto_temporario}"')
         break
     else:
         print(f' a palavra secreta esta assim: "{secreto_temporario}"')
