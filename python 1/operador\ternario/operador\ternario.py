@@ -28,6 +28,10 @@ print(msg2)
 sistema de maioridade
 """
 
-idade = 18
+idade = input('qual sua idade: ')
 
-print('maior de idade') if idade >= 18 else print('nao é maior de idade')
+if not idade.isnumeric():
+    print('voce precisa digitar um numero')
+else:
+    idade = int(idade)
+    print('maior de idade') if idade >= 18 else print('nao é maior de idade')
