@@ -1,0 +1,17 @@
+def f(var):
+    print(var)
+
+
+def dumb():
+    return f
+
+
+# função com "()" voce executa a função, e sem "()" voce apenas chama a função mas sem executa-la
+
+var = dumb()
+print(id(var), id(f))
+
+if var == f:
+    print('var é igual a f')
+else:
+    print('nao é')
