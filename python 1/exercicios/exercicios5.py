@@ -30,3 +30,15 @@ def giraChave():
 giraChave()
 
 
+def escapamento_barulhento():
+  print('ratatatatatatatatat')
+
+def guidao(acelera):
+  return acelera()
+
+def gira_guidao():
+  return guidao(escapamento_barulhento)
+
+gira_guidao()
+
+
