@@ -33,12 +33,21 @@ giraChave()
 def escapamento_barulhento():
   print('ratatatatatatatatat')
 
-def guidao(acelera):
-  return acelera()
+def guidao():
+  return escapamento_barulhento()
 
 def gira_guidao():
-  return guidao(escapamento_barulhento)
+  return guidao()
 
 gira_guidao()
+
+
+
+
+  
+
+
+
+
 
 
