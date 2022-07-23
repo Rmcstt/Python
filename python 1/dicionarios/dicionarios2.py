@@ -19,6 +19,9 @@ for k in d1:  # percorre as keys do dicionario
 for v in d1:  # percorre os valores do dicionario
     print(v)  # imprime os valores 'valor 1', 'valor 2', 'valor 3'
 
+for k, v in d1.items():
+    print(k,v)  # imprime as chaves e valores
+
 for x in d1.items():  # percorre os pares chave/valor do dicionario
     print(x[0], x[1])  #chave/valor 
 
