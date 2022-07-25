@@ -6,7 +6,7 @@ min, max
 lista = [varios valores]
 """
 
-lista = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+lista = ['a', 'b', 'c', 'd', 'e', 'f', 'g']  
 print(lista[0:3])  # ['a', 'b', 'c']
 print(lista[:3])   # ['a', 'b', 'c']
 print(lista[3:])  # ['d', 'e', 'f', 'g']
