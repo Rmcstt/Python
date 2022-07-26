@@ -30,7 +30,7 @@ lista_de_listas_de_inteiros = [
 
 def encontra_primeiro_duplicado(param_lista_de_inteiros):  # função que encontra o primeiro duplicado
   numeros_checados = set()  # cria um set vazio
-  primeiro_duplicado = -1  # cria um valor negativo para o primeiro duplicado
+  primeiro_duplicado = 'n' # cria um valor negativo para o primeiro duplicado
 
   for numero in param_lista_de_inteiros:  # itera sobre os números da lista de inteiros
     if numero in numeros_checados:  # se o número está no set
@@ -46,7 +46,7 @@ def encontra_primeiro_duplicado(param_lista_de_inteiros):  # função que encont
 
 for lista_de_inteiros in lista_de_listas_de_inteiros:  # itera sobre as listas de inteiros
   print(lista_de_inteiros,"=>",encontra_primeiro_duplicado(lista_de_inteiros))  # imprime a lista de inteiros e o primeiro duplicado
-  
+
 """
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] => -1
 [9, 1, 8, 9, 9, 7, 2, 1, 6, 8] => 9
