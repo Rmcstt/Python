@@ -9,4 +9,5 @@ print(next(lista))  # 1
 print(next(lista))  # 2
 print(next(lista))  # 3
 print(next(lista))  # 4
+
 print(next(lista))  # 5
