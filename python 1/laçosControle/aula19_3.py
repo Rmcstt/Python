@@ -22,7 +22,7 @@ while True:
     else:
         print('operador invalido')
 
-    sair = input('deseja dair ? [s] para sim e [n] para nao: ')
+    sair = input('deseja sair ? [s] para sim e [n] para nao: ')
 
     if sair == 's':
         break

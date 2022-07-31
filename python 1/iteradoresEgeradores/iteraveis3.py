@@ -1,5 +1,5 @@
-import sys
-import time
+import sys  # importa a biblioteca sys
+import time  # importa a biblioteca time
 
 def geraLista():  # cria uma lista com valores de 1 a 1000000
   r = []  # cria uma lista vazia
