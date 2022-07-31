@@ -4,7 +4,7 @@ if not idu.isdigit() and idu == int(idu):
     print('this is not a int number')
 else:
     idu = int(idu)
-    if not idu % 2 == 0:
+    if not idu % 2 == 0:  # if not é um operador de negacao
         print(f'{idu} is not a pair')
     else:
         print(f'{idu} is a pair')

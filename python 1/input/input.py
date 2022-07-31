@@ -14,7 +14,7 @@ entrada de dados em python
 ####
 
 
-num1 = float(input("multiplique "))
-num2 = float(input("por "))
+num1 = float(input("multiplique "))  # float é para que o usuario digite um numero decimal
+num2 = float(input("por "))  # float é para que o usuario digite um numero decimal
 
-print(f'resultado : {num1 * num2}')
+print(f'resultado : {num1 * num2}')  # resultado : 24.0
