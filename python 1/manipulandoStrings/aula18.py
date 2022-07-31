@@ -15,11 +15,11 @@ texto      = 'python_s2'
 
 url = 'https://google.com.br/'
 
-print(url[:-1])
+print(url[:-1])  # https://google.com.br
 nova_string = texto[:]  # [inicio:fim:passo]
-print(nova_string)
+print(nova_string)  # python_s2
 
-print(len(texto))
+print(len(texto))  # tamanho da string
 
 for letra in texto:
-    print(letra)
+    print(letra)  # p, y, t, h, o, n, _, s, 2
