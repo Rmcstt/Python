@@ -1,4 +1,3 @@
-from copy import deepcopy
 from produtos import pessoas, produtos, lista  # importação de produtos.py
 
 novaLista = map(lambda x: x * 2, lista)
