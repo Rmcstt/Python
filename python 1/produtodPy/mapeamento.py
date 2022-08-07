@@ -13,7 +13,7 @@ print(novaLista2)  # [2, 4, 6, 8, 10, 12, 14, 16, 18, 20].
 
 def desconto(p):  # função para calcular o desconto
   p['price'] = round(p['price'] * 0.9,2)  # calcula o desconto e arredonda para 2 casas decimais
-  return p  # retorna o produto com o desconto..
+  return p  # retorna o produto com o desconto
 
 novosPrecos = map(desconto, produtos)  # com o map eu chamo a função desconto para cada produto da lista
 soPreco = map(lambda x: x['price'], novosPrecos)  # com esse outro map eu pego apenas os produtos da lista
