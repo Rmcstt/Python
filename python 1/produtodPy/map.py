@@ -24,7 +24,11 @@ for preco in soPreco:  #... para cada preco da lista de precos...
 
 ########################################################################################################################
 
-soNome = map(lambda n: n['nome'], pessoas)
+def funcaoAumentaIdade(p):
+  p['novaIdade'] = round(p['idade'] * 1.20)
+  return p
+
+soNome = map(funcaoAumentaIdade, pessoas)
 
 for nome in soNome:
   print(f'\n{nome}')
