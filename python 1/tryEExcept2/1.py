@@ -4,16 +4,16 @@ try:
   try:  # pode ainda haver um try dentro de um try
     a = 1/0
   except:
-    print('erro')
+    print('error')
   
-except NameError as erro:  # captura o erro e o armazena na variavel erro
-  print('Erro do dev!!!', erro)
+except NameError as error:  # captura o erro e o armazena na variavel erro
+  print('Erro do dev!!!', error)
 
-except (IndexError, KeyError) as erro:  
-  print('Erro de indice ou erro de chave', erro)
+except (IndexError, KeyError) as error:  
+  print('Erro de indice ou erro de chave', error)
 
-except Exception as erro:
-  print('ocorreu um erro inesperado!!!', erro)
+except Exception as error:
+  print('ocorreu um erro inesperado!!!', error)
 
 else:
     pass
