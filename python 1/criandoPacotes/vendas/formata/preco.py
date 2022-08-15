@@ -1,0 +1,2 @@
+def real(valor):  # real é uma função que recebe um valor e retorna o valor formatado
+  return f'R$ {valor:.2f}'.replace('.', ',')  # replace substitui o ponto por vírgula e o .2f mostra 2 casas decimais
