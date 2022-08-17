@@ -7,7 +7,7 @@ def velocidade(funcao):  # funcao decoradora
     endTime = time()  # tempo de fim
     tempo = (endTime - startTime) * 1000  # calcula o tempo gasto
     print(f'\na funcao {funcao.__name__}'  # mostra o nome da funcao
-    f' levou {tempo:.4f} ms para executar')  # mostra o tempo gasto
+    f' levou {tempo:.5f} ms para executar')  # mostra o tempo gasto
     return resultado  # retorna o resultado
   return interna  # retorna a funcao interna
 
