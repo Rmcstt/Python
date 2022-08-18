@@ -6,18 +6,18 @@
 
 
 
-def show_op(todo_list):
+def show_op(todo_list):  # mostra as tarefas
+  print()  # pula linha
+  print('tarefas: ')  # mostra o que esta escrito
+  print(todo_list)  # mostra as tarefas
   print()
-  print('tarefas: ')
-  print(todo_list)
-  print()
 
 
 
 
 
 
-def do_undo(todo_list, redo_list):
+def do_undo(todo_list, redo_list):  # desfazer
   if not todo_list:
     print('nao ha tarefas para desfazer')
     return
@@ -28,7 +28,7 @@ def do_undo(todo_list, redo_list):
 
 
 
-def do_redo(todo_list, redo_list):
+def do_redo(todo_list, redo_list):  # refazer
   if not redo_list:
     print('nada para refazer ')
     return
@@ -38,7 +38,7 @@ def do_redo(todo_list, redo_list):
 
 
 
-def do_add(todo, todo_list):
+def do_add(todo, todo_list):  # adicionar tarefa
   todo_list.append(todo)
 
 
@@ -50,23 +50,23 @@ def do_add(todo, todo_list):
 
 
 
-if __name__ == '__main__':
-  todo_list = []
-  redo_list = []
+if __name__ == '__main__':  # se for o principal
+  todo_list = []  # lista de tarefas
+  redo_list = []  # lista de tarefas desfeitas
 
   while True:
-    todo = input('digiteuma tarefa, undo, redo, ls: ')
+    todo = input('digiteuma tarefa, undo, redo, ls: ')  # digiteuma tarefa
 
-    if todo == 'ls':
-      show_op(todo_list)
+    if todo == 'ls':  # se for ls
+      show_op(todo_list)  # mostra as tarefas
       continue
     
-    elif todo == 'undo':
-      do_undo(todo_list, redo_list)
+    elif todo == 'undo':  # se for undo
+      do_undo(todo_list, redo_list)  # desfazer
       continue
     
-    elif todo == 'redo':
-      do_redo(todo_list, redo_list)
+    elif todo == 'redo':  # se for redo
+      do_redo(todo_list, redo_list)  # refazer
       continue
 
-    do_add(todo, todo_list)
+    do_add(todo, todo_list)  # adicionar tarefa
