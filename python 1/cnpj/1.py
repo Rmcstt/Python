@@ -23,6 +23,11 @@ Recap.
 """
 
 
-import cnpj 
+import cnpj
 
-cnpj1 = cnpj.valida('04.252.011/0001-10')
+cnpj1 = '04.252.011/0001-10'
+cnpj2 = '40.688.134/0001-61'
+cnpj3 = '71.504.168/0001-11'
+cnpj4 = '12.544.992/0001-05'
+
+cnpj.valida(cnpj4)
