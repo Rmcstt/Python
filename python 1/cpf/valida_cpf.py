@@ -23,16 +23,16 @@ while True:
     reverso = 10
     total = 0
 
-    for index in range(19):
-        if index > 8:
-            index -= 9
+    for index in range(19):  # multiplicando os numeros do cpf por suas posições 
+        if index > 8:  
+            index -= 9  # subtraindo 9 para nao ultrapassar o tamanho do cpf
 
-        total += int(novo_cpf[index]) * reverso
+        total += int(novo_cpf[index]) * reverso  # somando os numeros multiplicados
 
         reverso -= 1
         if reverso < 2:
             reverso = 11
-            d = 11 - (total % 11)
+            d = 11 - (total % 11)  # calculando o digito verificador
 
             if d > 9:
                 d = 0

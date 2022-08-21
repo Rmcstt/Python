@@ -23,16 +23,16 @@ Recap.
 """
 
 
-import cnpj
+import cnpj  # importando o arquivo cnpj.py
 
 cnpj1 = '04.252.011/0001-10'
 
-if cnpj.valida(cnpj1):
-    print(f'{cnpj1} é válido')
+if cnpj.valida(cnpj1):  # chamando a funcao valida so arquivo cnpj.py
+    print(f'{cnpj1} é válido')  # se for true ...
 else:
-    print(f'{cnpj1} é inválido')
+    print(f'{cnpj1} é inválido') # se for false...
 
-for i in range(1):
+for i in range(1):  # looping para gerar ncpjs aleatorios validos
     novo_cnpj = cnpj.gera()
-    formatado = cnpj.formata(novo_cnpj)
+    formatado = cnpj.formata(novo_cnpj)  # formata o cnpj para o padrao brasileiro
     print(formatado)
