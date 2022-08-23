@@ -1,3 +1,4 @@
+from random import randint
 from datetime import datetime  # importando a classe datetime
 
 class Pessoa:  # moldura da classe pessoa
@@ -15,3 +16,7 @@ class Pessoa:  # moldura da classe pessoa
       idade = cls.anoAtual - get_ano_nascimento
       return cls(nome, idade)
 
+    @staticmethod  # metodo estatico
+    def gera_id():
+      rand = randint(10000, 19999)
+      return f'o id do usuario é: {rand}'
