@@ -1,4 +1,4 @@
-from random import randint
+from random import randint  # importa a funcao randint do modulo random
 from datetime import datetime  # importando a classe datetime
 
 class Pessoa:  # moldura da classe pessoa
