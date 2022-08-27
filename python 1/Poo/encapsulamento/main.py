@@ -17,7 +17,7 @@ class baseDeDados:  # classe base
   def __init__(self):  # metodo contrutor
     self.__dados = {}  # dicionario privado
 
-  @property  # decorador
+  @property  # getter
   def dados(self):  # getter
     return self.__dados  # retorna o dicionario 
 
