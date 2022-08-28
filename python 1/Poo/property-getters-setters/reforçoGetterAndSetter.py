@@ -9,7 +9,7 @@ getter e setter sao usados para mudar um valor de um atributo privado
 
 class Pessoa:
     def __init__(self, nome):
-        self.nome = nome
+        self._nome = nome
 
     @property
     def nome(self):
@@ -17,10 +17,15 @@ class Pessoa:
 
     @nome.setter
     def nome(self, nome):
-        print('setando nome')
+        print('seter foi executado')
         self._nome = nome
 
+    @property
+    def sobrenome(self):
+        return 'desconhecido'
 
-p1 = Pessoa('otavio')
+
+p1 = Pessoa('renato')
 
 print(p1.nome)
+print(p1.sobrenome)
