@@ -1,3 +1,11 @@
+"""
+associação - usa
+agregação - tem
+composição - é dono
+herança - é 
+"""
+
+
 from classes import Escritor, Caneta, MaquinaDeEscrever
 
 escritor = Escritor('renato')  # instanciando um escritor

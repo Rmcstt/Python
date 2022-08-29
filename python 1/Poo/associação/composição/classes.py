@@ -1,12 +1,12 @@
 class Cliente:
-  def __init__(self, nome, idade):
+  def __init__(self, nome, idade):  # construtor
     self._nome = nome
     self._idade = idade
-    self._enderecos = []
+    self._enderecos = []  # lista de enderços
 
   @property  # getter para pegar o "nome" que esta privado
   def nome(self):
-    return self._nome
+    return self._nome  # retorna _nome como nome
 
   def inserir_endereco(self, cidade, estado):
     self._enderecos.append(Endereco(cidade, estado))
@@ -15,7 +15,7 @@ class Cliente:
     for endereco in self._enderecos:
       print(endereco._cidade, endereco._estado)
 
-  def __del__(self):
+  def __del__(self):  # destructor
     print(f'{self._nome} foi apagado')
 
 
@@ -27,12 +27,12 @@ class Endereco:
 
   @property
   def cidade(self):
-    return self._cidade
+    return self._cidade  # retorna _cidade como cidade
 
   @property
   def estado(self):
-    return self._estado
+    return self._estado  # retorna _estado como estado
 
-  def __del__(self):
+  def __del__(self):  #destructor
     print(f'{self.cidade}/{self.estado} foi apagado')
 

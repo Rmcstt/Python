@@ -4,7 +4,7 @@ composição é a relação inde a classe faz parte de outra classe
 se uma for apagada... a outra automaticamente é apagada
 """
 
-from classes import Cliente, Endereco
+from classes import Cliente
 
 cliente1 = Cliente('renato', 26)
 cliente1.inserir_endereco('são paulo', 'sp')
