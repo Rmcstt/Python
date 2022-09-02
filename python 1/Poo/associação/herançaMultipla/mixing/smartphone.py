@@ -1,23 +1,37 @@
 from eletronico import Eletronico
+from log import LogMixin
 
-class Smartphone(Eletronico):
+class Smartphone(Eletronico, LogMixin):
   def __init__(self, nome):
     super().__init__(nome)
     self._conectado = False
 
   def conectar(self):
     if not self._ligado:
-      print(f'{self._nome} precisa estar ligado para conectar')
+      info = f'{self._nome} precisa estar ligado para conectar'
+      print(info)
+      self.log_info(info)
       return
     
     if self._conectado:
-      print(f'{self._nome}a ja esta conectado')
+      error = f'{self._nome} ja esta conectado'
+      print(error)
+      self.log_error(error)
       return
 
+    info = f'{self._nome} conectado'
+    print(info)
+    self.log_info(info)
     self._conectado = True
 
   def desconectado(self):
     if not self._conectado:
-      print(f'{self._nome} nao esta conectado')
+      error = f'{self._nome} nao esta conectado'
+      print(error)
+      self.log_error(error)
       return
+    
+    info = f'{self._nome} foi desligado com sucesso'
+    print(info)
+    self.log_info(info)
     self._conectdo = False
