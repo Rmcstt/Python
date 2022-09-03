@@ -10,7 +10,7 @@ class Smartphone(Eletronico, LogMixin):
     if not self._ligado:
       info = f'{self._nome} precisa estar ligado para conectar'
       print(info)
-      self.log_info(info)
+      self.log_error(info)
       return
     
     if self._conectado:
@@ -31,7 +31,7 @@ class Smartphone(Eletronico, LogMixin):
       self.log_error(error)
       return
     
-    info = f'{self._nome} foi desligado com sucesso'
+    info = f'{self._nome} desconectado com sucesso'
     print(info)
     self.log_info(info)
     self._conectdo = False
