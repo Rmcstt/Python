@@ -40,5 +40,5 @@ class Conta(ABC):  # classe abstrata
 
 
   @abstractmethod  # metodo abstrato
-  def sacar(salf, valor):
+  def sacar(salf, valor):  
     pass
