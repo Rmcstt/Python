@@ -1,3 +1,5 @@
+#  nesse caso aqui podemos ate mesmo setar se um atributo de uma classe pode ou nao sobrepor o atributo da classe pai...
+
 class Meta(type):
     def __new__(mcs, name, bases, namespace):
         if name == 'A':
