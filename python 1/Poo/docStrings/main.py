@@ -1,10 +1,11 @@
 
+import umaLinha
 import variasLinhas
 import funcoes
 import funcoes2
 import classes
 import typehints
-import umaLinha
+
 #help(umaLinha)
 #help(variasLinhas)
 #help(funcoes)
