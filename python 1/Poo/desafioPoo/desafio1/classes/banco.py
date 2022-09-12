@@ -17,7 +17,7 @@ class Banco:
     if cliente.conta not in self.contas:
       return False
 
-    if cliente.conta.cgencia not in self.agencias:
+    if cliente.conta.agencia not in self.agencias:
       return False
 
     return True
