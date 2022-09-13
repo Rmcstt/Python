@@ -20,6 +20,7 @@ class CalcIpv4:
   def ip(self, valor):
     if not self._valida_ip(valor):
       raise ValueError('ip invalido')
+
     self._ip = valor
 
   @mascara.setter
@@ -29,6 +30,9 @@ class CalcIpv4:
 
     if not self._valida_ip(valor):
       raise ValueError('mascara invalda')
+
+    self._mascara = valor
+    self._ip_to_bin(valor)
 
   @prefixo.setter
   def prefixo(self, valor):
@@ -40,6 +44,8 @@ class CalcIpv4:
 
     if valor < 0 or valor > 32:
       raise ValueError('prefixo deve estar entre 0 e 32') 
+
+    self._prefixo = valor
 
   @staticmethod
   def _valida_ip(ip):
@@ -53,3 +59,4 @@ class CalcIpv4:
   @staticmethod
   def _ip_to_bin(self, ip):
     """ converte o ip informado para binario """
+    print(ip)
