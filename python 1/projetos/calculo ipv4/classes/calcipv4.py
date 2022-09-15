@@ -9,6 +9,13 @@ class CalcIpv4:
     self._set_broadcast()
     self._set_rede()
 
+    print(f'numero ip :           {self.ip}')
+    print(f'mascara :             {self.mascara}')
+    print(f'rede :                {self.rede}')
+    print(f'broadcast :           {self.broadcast}')
+    print(f'prefixo :             {self.prefixo}')
+    print(f'quantidade de hosts : {self.num_ips()}')
+
   @property
   def ip(self):
     return self._ip
@@ -18,6 +25,15 @@ class CalcIpv4:
   @property
   def prefixo(self):
     return self._prefixo
+  @property
+  def rede(self):
+    return self._rede
+  @property
+  def broadcast(self):
+    return self._broadcast
+  @property
+  def num_ips(self):
+    return self._num_ips
 
   @ip.setter
   def ip(self, valor):
@@ -96,5 +112,9 @@ class CalcIpv4:
     self._rede_bin = self._ip_bin[:self.prefixo] + (host_bits * '0')
     self._rede = self._bin_to_ip(self._rede_bin)
     return self._rede
+
+  def _num_ips(self):
+    """ calcula o numero de ips da rede"""
+    return 2 ** (32 - self.prefixo) - 2
     
 
