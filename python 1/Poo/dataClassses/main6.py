@@ -1,4 +1,6 @@
 from dataclasses import dataclass 
+from dataclasses import field
+from dataclasses import asdict, astuple
 
 @dataclass(eq=True, order=True, frozen=False, repr=True, init=True)
 # itens a serem colocados como parametros do dataclass
@@ -11,9 +13,9 @@ from dataclasses import dataclass
 
 
 class Pessoa:
-  nome :str = 'renato'
-  idade :int = 27
-  sobrenome :str = 'mota costa'
+  nome :str
+  idade :int
+  sobrenome :str = field(repr=False) #faz com que 
   # corDaPele :str = 'branca'
   # profissao :str = 'programador'
   # altura :float = 1.80
@@ -25,14 +27,14 @@ class Pessoa:
   @property
   def nome_completo(self):
     return f'{self.nome} {self.sobrenome}'
-
+p1 = Pessoa('renato', '22', 'costa')
 p2 = Pessoa('b', 'renato')
-p3 = Pessoa('e', 'renato')
+p3 = Pessoa('c', 'renato')
 p4 = Pessoa('d', 'renato')
-p5 = Pessoa('c', 'renato')
-p6 = Pessoa(9797, '9')  # erro proposital
+p5 = Pessoa('e', 'renato')
+p6 = Pessoa('f', 'renato')
 
 
-pessoas = [p2, p3, p4, p5, p6]
+pessoas = [p1, p2, p3, p4, p5, p6]
 
 print(sorted(pessoas))
