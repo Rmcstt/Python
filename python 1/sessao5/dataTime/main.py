@@ -18,10 +18,20 @@ from datetime import datetime, timedelta
 # .timestamp
 # .fromtimestamp()
 
-data = datetime.strptime('18/12/1995 00:18:00', '%d/%m/%Y %H:%M:%S')
+# data = datetime.strptime('18/12/1995 00:18:00', '%d/%m/%Y %H:%M:%S')
 
-data = data + timedelta(days=1, hours=1, minutes=1 , seconds=1)
+# # data = data + timedelta(days=1, hours=1, minutes=1 , seconds=1)
+# data = data + timedelta(seconds=2*60*60)
 
-print(data.strftime('%d/%m/%Y %H:%M:%S'))
+# print(data.strftime('%d/%m/%Y %H:%M:%S'))  # 
 
 
+d1 = datetime.strptime('18/12/1995 00:18:00', '%d/%m/%Y %H:%M:%S')
+d2 = datetime.strptime('29/12/1995 00:18:00', '%d/%m/%Y %H:%M:%S')
+
+dif = d2 - d1
+
+print(dif)  #  11 days, 0;00:00
+print(dif.seconds)  # 0
+print(dif.total_seconds())  # 950400.0
+print(d1.time())  # 00:18:00
