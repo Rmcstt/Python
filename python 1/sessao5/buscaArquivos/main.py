@@ -1,3 +1,4 @@
+from modulo import formata_tamanho
 import os
 
 caminho_predefinido = '/Users/Renatomota'  # coloque uma base para procura
@@ -8,32 +9,6 @@ termo_procura = input('algum termo para procurar? :')
 
 caminho_procura = caminho_predefinido + meu_caminho
 
-def formata_tamanho(tamanho):
-  base = 1024
-  kilo = base
-  mega = base ** 2
-  giga = base ** 3
-  tera = base ** 4
-  peta = base ** 5
-
-  if tamanho < kilo:
-    tamanho = tamanho
-    texto = 'B'
-  elif tamanho < mega:
-    tamanho /= kilo
-    texto = 'K'
-  elif tamanho < giga:
-    tamanho /= mega
-    texto = 'M'
-  elif tamanho < tera:
-    tamanho /= giga
-    texto = 'G'
-  elif tamanho < peta:
-    tamanho /= tera
-    texto = 'T'
-
-  tamanho = round(tamanho, 2)
-  return f'{tamanho} {texto}'.replace('.',',')
 
 conta = 0
 for raiz, diretorios, arquivos in os.walk(caminho_procura):
