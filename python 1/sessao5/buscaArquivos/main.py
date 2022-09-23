@@ -1,6 +1,6 @@
 import os
 
-caminho_predefinido = '/Users/renatomota/Desktop/EXTRO/'
+caminho_predefinido = '/Users/Renatomota'  # coloque uma base para procura
 
 meu_caminho = input('digite  o nome da pasta: ')
 
@@ -17,7 +17,7 @@ def formata_tamanho(tamanho):
   peta = base ** 5
 
   if tamanho < kilo:
-    tamanho = base
+    tamanho = tamanho
     texto = 'B'
   elif tamanho < mega:
     tamanho /= kilo
@@ -33,7 +33,7 @@ def formata_tamanho(tamanho):
     texto = 'T'
 
   tamanho = round(tamanho, 2)
-  return f'{tamanho} {texto}'
+  return f'{tamanho} {texto}'.replace('.',',')
 
 conta = 0
 for raiz, diretorios, arquivos in os.walk(caminho_procura):
