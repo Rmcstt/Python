@@ -1,7 +1,7 @@
 from modulo import formata_tamanho
 import os
 
-caminho_predefinido = '/Users/Renatomota'  # coloque uma base para procura
+caminho_predefinido = '/Users/renatomota'  # coloque uma base para procura
 
 meu_caminho = input('digite  o nome da pasta: ')
 
