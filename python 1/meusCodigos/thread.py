@@ -7,7 +7,7 @@ contador = []
 def corrida(velocidade, corredores):
   trajeto = 0
   global contador
-  while trajeto <= 100 and not contador:
+  while not contador:
     trajeto += velocidade * random.randint(1,10)
     time.sleep(0.5)
     print(f'corredor: {corredores} km {trajeto}')
@@ -20,7 +20,7 @@ def corrida(velocidade, corredores):
 
     
 def main():
-  lista = ['jeff', 'renato']
+  lista = ['jeff', 'renato', 'maria', 'joao', 'pedro']
   for corredores in lista:
     t = threading.Thread(target=corrida, args=(1, corredores))
     t.start()
