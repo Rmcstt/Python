@@ -1,3 +1,5 @@
+import threading
+
 
 pi = '979797979'
 
@@ -22,6 +24,7 @@ def maior_palindromo_primo(string):
             else:
                 palindromos_primos.append(int(palindromo))
     return max(palindromos_primos)
+
 
 print(maior_palindromo_primo(pi))
 
