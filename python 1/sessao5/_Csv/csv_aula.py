@@ -7,7 +7,6 @@ import csv
 
 
 with open('/Users/renatomota/Desktop/Python/python 1/sessao5/_Csv/clientes.csv', 'r') as arquivo:
-  dados = csv.reader(arquivo)
-
-  for dado in dados:
-    print(dado)
+    dados = csv.DictReader(arquivo)
+    for dado in dados:  # tem que estar escrito corretamente , ate mesmo os espaços !!!
+        print(dado['Nome'], dado[' Sobrenome'],  dado[' email'], dado[' telefone'])
