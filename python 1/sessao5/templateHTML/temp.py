@@ -1,3 +1,4 @@
+# nao esquecer de habilitar a senha no google
 
 
 import smtplib
