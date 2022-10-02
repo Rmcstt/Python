@@ -5,6 +5,8 @@ url = 'https://pt.stackoverflow.com/questions/tagged/python'
 response = requests.get(url)
 html = BeautifulSoup(response.text, 'html.parser')
 
+
+# precisa dar um ' selecionar elemento' no site e copiar o seletor
 for pergunta in html.select('.s-post-summary.js-post-summary'):
   titulo = pergunta.select_one('.s-link')
   data = pergunta.select_one('.relativetime')
