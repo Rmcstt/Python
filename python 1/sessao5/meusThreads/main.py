@@ -1,6 +1,6 @@
 from time import sleep
 from threading import Thread
-from threading import Lock
+from threading import Lock  # importa a classe que bloqueia o acceco das threads
 import os
 import random 
 
@@ -63,13 +63,13 @@ import random
 class Ingressos:
     def __init__(self, estoque):
         self.estoque = estoque
-        self.lock = Lock()
+        self.lock = Lock() # cria o objeto que bloqueia o acesso das threads
 
     def comprar(self, quantidade):
         self.lock.acquire()
         if self.estoque < quantidade:
             print('Nao temos ingressos suficientes')
-            self.lock.release()
+            self.lock.release()  # libera o acesso
             return
 
         
@@ -92,9 +92,9 @@ if __name__=='__main__':
         lista_threads.append(t)
 
     for t in lista_threads:
-        t.start()
+        t.start()  # inicia as threads
     for thread in lista_threads:
-        thread.join()
+        thread.join()  # espera as threads terminarem e junta tudo
 
 
     executando = True

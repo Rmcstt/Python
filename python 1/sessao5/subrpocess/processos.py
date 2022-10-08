@@ -5,7 +5,7 @@ import subprocess
 
 # exemplo a seguir seria o ping do google...
 
-ping = subprocess.run(['ping','-c','4','google.com'],capture_output=True, text=True) 
+ping = subprocess.run(['ping','-c','4','google.com'],capture_output=True, text=True)   # o capture_output=True serve para capturar a saida do comando e o text=True serve para transformar a saida em texto
 
 
 
