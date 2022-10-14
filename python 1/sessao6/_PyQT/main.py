@@ -3,7 +3,21 @@ PyQT é um toolkit desenvolvido em c++ para desenvolvimento de aplicações graf
 """
 
 import sys
+
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QGridLayout
+
+#  QApplication é a classe principal do PyQT, ela é responsavel por gerenciar os eventos e a execução da aplicação
+
+#  QMainWindow é a classe que representa a janela principal da aplicação
+
+#  QPushButton é a classe que representa um botão
+
+#  QWidget é a classe que representa um widget
+
+#  QGridLayout é a classe que representa um layout de grade
+
+
+# tudo em pyqt é uma classe, e para criar uma classe, basta herdar de uma classe existente
 
 
 
@@ -25,8 +39,10 @@ class App(QMainWindow):
     print('lascou')
 
 
+
+# importante ter salvo essa parte do codigo
 if __name__ == '__main__':
   qt = QApplication(sys.argv)
   app = App()
   app.show()
-  qt.exec()
+  qt.exec()  # antes era qt.exec_(), mas agora no pyqt6 é qt.exec()
