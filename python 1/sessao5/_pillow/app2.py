@@ -16,7 +16,7 @@ def resize(root, file, new_width, new_img_name):
 
     new_img = img_pillow.resize((new_width, new_height), Image.LANCZOS)
     
-    new_img.save(new_img_path, optimize=True, quality=60, exif=img_pillow.info.get('exif'))
+    new_img.save(new_img_path, optimize=True, quality=80, exif=img_pillow.info.get('exif'))
 
     print(f'imagem salva em {new_img_path}')
     
