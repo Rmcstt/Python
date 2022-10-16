@@ -11,22 +11,22 @@ if os.name == 'posix':
 else:
     cls = "cls"
 
-t1 = Thread(target=vai_demorar, args=('concluido', 10))
+t1 = Thread(target=vai_demorar, args=('sucessfull', 10))
 t1.start()
 
 while t1.is_alive():
     os.system(cls)
-    print('processando')
+    print('hacking the system')
     sleep(.5)
     os.system(cls)
-    print('processando.')
+    print('hacking the system.')
     sleep(.5)
     os.system(cls)
-    print('processando..')
+    print('hacking the system..')
     sleep(.5)
     os.system(cls)
-    print('processando...')
+    print('hacking the system...')
     sleep(.5)
     os.system(cls)
-    print('processando....')
+    print('hacking the system....')
     sleep(.5)
