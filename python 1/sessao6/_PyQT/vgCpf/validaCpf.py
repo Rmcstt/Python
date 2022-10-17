@@ -2,8 +2,12 @@
 
 
 
+import re
+
+
 def valida_cpf(cpf):
-  cpf = cpf
+  cpf = str(cpf)
+  cpf = re.sub(r'[^0-9]', '', cpf)
   novo_cpf = cpf[:-2]
   reverso = 10
   total = 0
