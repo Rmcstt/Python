@@ -1,8 +1,8 @@
 
-from os import truncate
 
 
-def valida_cpf():
+
+def valida_cpf(cpf):
   cpf = cpf
   novo_cpf = cpf[:-2]
   reverso = 10
