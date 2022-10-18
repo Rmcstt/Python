@@ -5,9 +5,13 @@
 import re
 
 
+
+
 def valida_cpf(cpf):
   cpf = str(cpf)
   cpf = re.sub(r'[^0-9]', '', cpf)
+  if not cpf or len(cpf) != 11:
+    return False
   novo_cpf = cpf[:-2]
   reverso = 10
   total = 0
