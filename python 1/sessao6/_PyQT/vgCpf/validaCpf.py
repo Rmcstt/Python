@@ -35,6 +35,6 @@ def valida_cpf(cpf):
   sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
 
   if cpf == novo_cpf and not sequencia:
-      return True
+      return "CPF valido"
   else:
-      return False
+      return "CPF invalido"
