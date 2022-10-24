@@ -1,0 +1,15 @@
+alguns coomandos basicos do django
+
+
+1-  para iniciar um projeto : django-admin startproject nome_do_projeto
+
+2- para iniciar um app : python manage.py startapp nome_do_app
+
+3- para rodar o servidor : python manage.py runserver
+
+
+4- para criar um super usuario : python manage.py createsuperuser
+
+5- para criar as tabelas no banco de dados : python manage.py migrate
+
+6- para criar as tabelas no banco de dados : python manage.py makemigrations
