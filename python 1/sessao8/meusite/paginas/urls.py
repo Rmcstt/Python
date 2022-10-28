@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-urlpattern = [
+urlpatterns = [
 
   path('', views.index, name='index'),
   path('sobre/', views.sobre, name='sobre'),
