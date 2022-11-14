@@ -10,6 +10,10 @@ def logout(request):
   return render(request, 'accounts/logout.html')
 
 def cadastro(request):
+  if request.method != 'POST':
+    messages.info(request, 'nada postado')
+    return render(request, 'accounts/cadastro.html')
+
   return render(request, 'accounts/cadastro.html')
 
 def dashboard(request):
