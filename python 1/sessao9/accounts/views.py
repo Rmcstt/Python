@@ -16,7 +16,7 @@ def login(request):
   user = auth.authenticate(request, username=usuario, password=senha)
 
   if not user:
-    messages.error(request, 'Usuario ou saenha invalidos!!!')
+    messages.error(request, 'Usuario ou senha invalidos!!!')
     return render(request, 'accounts/login.html')
   
   else:
@@ -28,7 +28,7 @@ def login(request):
 def logout(request):
   auth.logout(request)
   return redirect('login')
-  
+
 def cadastro(request):
   if request.method != 'POST':
     return render(request, 'accounts/cadastro.html')
