@@ -5,5 +5,5 @@ from django import forms
 
 class ContatoForm(forms.ModelForm):
   class Meta:
-    mokdel = Contato
+    model = Contato
     exclude = ()
