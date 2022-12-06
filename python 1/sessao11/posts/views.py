@@ -26,10 +26,21 @@ class PostIndex(ListView):
     return qs
 
 class PostBusca(PostIndex):
-  pass
+  template_name = 'posts/post_busca.html'
 
 class PostCategoria(PostIndex):
-  pass
+  template_name = 'posts/post_categoria.html'
+
+  def get_queryset(self):
+    qs = super().get_queryset()
+
+    categoria = self.kwargs.get('categoria', None)
+
+    if not categoria:
+      return qs
+    
+    qs = qs.filter(categoria_post__nome_cat__iexact=categoria)
+    return qs
 
 class PostDetalhes(UpdateView):
   pass
