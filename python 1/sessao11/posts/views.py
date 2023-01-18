@@ -4,6 +4,7 @@ from django.views.generic.edit import UpdateView
 from .models import Post
 from django.db.models import Q, Count, Case, When
 from comentarios.forms import FormComentario
+from comentarios.models import Comentario
 # Create your views here.
 
 
@@ -65,3 +66,9 @@ class PostDetalhes(UpdateView):
   model = Post
   form_class = FormComentario
   context_object_name = 'post'
+
+  def form_valid(self, form):
+    post = self.get_object()
+    comentario = Comentario(**form.cleabed_data)
+    comentario.post_comentario = post
+
